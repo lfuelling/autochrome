@@ -49,7 +49,7 @@ ENV["GOOGLE_DEFAULT_CLIENT_ID"]="invalid"
 ENV["GOOGLE_DEFAULT_CLIENT_SECRET"]="invalid"
 
 opts = [
-  "--ignore-certificate-errors",
+  "--ignore-certificate-errors --disable-xss-auditor",
   "--disable-xss-auditor",
   "--no-default-browser-check",
   "--no-first-run",
