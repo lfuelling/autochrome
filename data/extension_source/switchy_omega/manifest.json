@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "__MSG_manifest_app_name__",
+  "name": "SwitchyOmega",
   "version": "2.5.21",
-  "description": "__MSG_manifest_app_description__",
+  "description": "Manage and switch between multiple proxies quickly & easily.",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkhwZJT76btQ04EEMOFtZPLESD1TmSVjbLjs0OyesD9Ht8YllFPfJ3qmtbSQGVuvmxH1GK/jUO2QcEWb8bHuOjoRlq20fi5j5Aq90O8FKET+y5D8PxCyi3WmnquiEwaE5cNmaCsw/G2JlO+bZOtdQ/QKOvMxBAegABYimEGfSvCMVUEvpymys0gBhLoch72zPAiJUBkf0z8BtjYTueMRcRXkrSeRPLygUDQnZ1TkQWMYYBp/zqpD5ggxytAklEMQzR9Hn0lqu5s7iuUAgihbysPn/8Wh00Zj5FySpK//KcpG3JS7UWxC28oSt8z5ZR3YimnX+HX3P36V0mC1pgM4o7wIDAQAB",
   "icons": {
     "16": "img/icons/omega-action-16.png",
@@ -21,7 +21,7 @@
       "24": "img/icons/omega-action-24.png",
       "32": "img/icons/omega-action-32.png"
     },
-    "default_title": "__MSG_manifest_icon_default_title__",
+    "default_title": "SwitchyOmega",
     "default_popup": "popup/index.html"
   },
   "background": {
