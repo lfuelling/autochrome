@@ -6,7 +6,7 @@
     "enabled": false
   },
   "bookmark_bar": {
-    "show_apps_shortcut": false
+    "show_apps_shortcut": true
   },
   "browser": {
     # clears everything that is not a URL in the history or cached files
@@ -33,6 +33,12 @@
   },
   "download": {
     "prompt_for_download": true
+  },
+  "extensions": {
+    "disabled": false,
+    "ui": {
+      "developer_mode": true
+    }
   },
   "local_discovery": {
     "notifications_enabled": false
