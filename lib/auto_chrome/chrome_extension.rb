@@ -15,16 +15,17 @@ class AutoChrome::ChromeExtension
 
     @manifest = JSON.parse(json, symbolize_names: true)
 
-    if @manifest.dig(:key) != nil
-      puts "[---] Got key from manifest!"
-      @key = @manifest[:key]
-      @id = Digest::SHA256.hexdigest(Base64.decode64(@key))[0...32].tr('0-9a-f', 'a-p')
-    else
-      puts "[---] Reading key from external file..."
-      key_file = File.dirname(path) + "/" + File.basename(@path, ".crx") + ".pub"
-      unless File.exists?(key_file)
+    puts "[---] Reading key from external file..."
+    key_file = File.dirname(path) + "/" + File.basename(@path, ".crx") + ".pub"
+    unless File.exists?(key_file)
+      if @manifest.dig(:key) != nil
+        puts "[---] Got key from manifest!"
+        @key = @manifest[:key]
+        @id = Digest::SHA256.hexdigest(Base64.decode64(@key))[0...32].tr('0-9a-f', 'a-p')
+      else
         raise "No key file found for extension #{path}"
       end
+    else
       @key = File.read(key_file)
       @id = Digest::SHA256.hexdigest(key)[0...32].tr('0-9a-f', 'a-p')
       @manifest[:key] = Base64.encode64(@key).gsub(/\s/, '')
